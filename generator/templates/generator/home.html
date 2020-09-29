@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Passwort Generierer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'basic.css' %}">
+</head>
+<body>
+<div class="container text-center">
+
+    <h1>Passwort Generierer</h1>
+
+    <form action="{% url 'password' %}">
+        <select name="length">
+            <option value="6">6 Zeichen lang</option>
+            <option value="7">7 Zeichen lang</option>
+            <option value="8">8 Zeichen lang</option>
+            <option value="9">9 Zeichen lang</option>
+            <option value="10">10 Zeichen lang</option>
+            <option value="11">11 Zeichen lang</option>
+            <option value="12" selected>12 Zeichen lang</option>
+            <option value="13">13 Zeichen lang</option>
+            <option value="14">14 Zeichen lang</option>
+            <option value="15">15 Zeichen lang</option>
+            <option value="16">16 Zeichen lang</option>
+            <option value="17">17 Zeichen lang</option>
+            <option value="18">18 Zeichen lang</option>
+            <option value="19">19 Zeichen lang</option>
+            <option value="20">20 Zeichen lang</option>
+        </select>
+        <br><br>
+        <input type="checkbox" id="uppercase" name="uppercase" value="True">
+        <label for="uppercase"> Großbuchstaben</label>
+        <br><br>
+        <input type="checkbox" id="number" name="number" value="True">
+        <label for="number"> Zahlen</label>
+        <br><br>
+        <input type="checkbox" id="special" name="special" value="True">
+        <label for="special"> Sonderzeichen</label>
+        <br><br>
+        <input class="btn btn-primary" type="submit" value="Generate Password">
+    </form>
+</div>
+</body>
+</html>
